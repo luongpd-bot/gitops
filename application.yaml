@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-service
+  namespace: argocd
+
+spec:
+  project: default
+
+  source:
+    repoURL: https://git.mobgame.mobi/luongpd/gitops.git
+    targetRevision: main
+    path: apps/my-service
+    helm:
+      valueFiles:
+        - values-prod.yaml
+
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: my-service
+
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
