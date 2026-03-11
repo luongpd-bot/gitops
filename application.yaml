@@ -9,7 +9,7 @@ spec:
 
   source:
     repoURL: https://git.mobgame.mobi/luongpd/gitops.git
-    targetRevision: main
+    targetRevision: master
     path: apps/my-service
     helm:
       valueFiles:
