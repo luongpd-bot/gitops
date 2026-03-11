@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: ttl.sh/springboot
-  tag: "v2"
+  tag: "latest"
   pullPolicy: IfNotPresent
 
 service:
