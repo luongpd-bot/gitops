@@ -31,8 +31,6 @@ env:
   - name: LOG_LEVEL
     value: "info"
 
-nodeSelector:
-  node-type: production
 
 tolerations: []
 
